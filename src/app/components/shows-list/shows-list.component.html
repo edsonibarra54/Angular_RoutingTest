@@ -1,5 +1,3 @@
-<h1 *ngIf="tvShows.length > 0">Programas de television</h1>
-
 <div class="cardContainer">
   <app-show-card *ngFor="let show of tvShows" [tvShow]="show" (delete)="onDelete($event)"></app-show-card>
 </div>
