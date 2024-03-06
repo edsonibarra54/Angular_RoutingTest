@@ -4,6 +4,7 @@ import { ContactPage } from './pages/contact/contact.page';
 import { AboutPage } from './pages/about/about.page';
 import { TvShowPage } from './pages/tv-show/tv-show.page';
 import { ErrorPage } from './pages/error/error.page';
+import { LoginPage } from './pages/login/login.page';
 
 export const routes: Routes = [
     { path: "", redirectTo: "tvShow", pathMatch: "full" },
@@ -11,6 +12,7 @@ export const routes: Routes = [
     { path: "contact", component: ContactPage },
     { path: "about", component: AboutPage },
     { path: "tvShow", component: TvShowPage },
+    { path: "login", component: LoginPage },
     { path: "error", component: ErrorPage },
     // Option 1
     //{ path: "**", component: ErrorPage }

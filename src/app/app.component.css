@@ -3,12 +3,18 @@ nav{
     background-color: black;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.routes{
+    display: flex;
+    align-items: center;
 }
 
 a{
     color: white;
     text-decoration: none;
-    margin-left: 15px;
+    margin: 0 10px;
     font-size: 20px;
     font-weight: bold;
 }
