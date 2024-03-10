@@ -1,3 +1,3 @@
 <h1>Programas de television</h1>
-<app-controls (invertir)="invertirTvShows()" (evento)="setAllAs($event)" (onSearch)="searchByTerm($event)"></app-controls>
-<app-shows-list [tvShows]="tvShows1" (delete)="deleteTvShow($event)"></app-shows-list>
+<app-controls (invertir)="invertirTvShows()" (evento)="setAllAs($event)" (onSearch)="search($event)"></app-controls>
+<app-shows-list [tvShows]="tvShows" (delete)="deleteTvShow($event)"></app-shows-list>
