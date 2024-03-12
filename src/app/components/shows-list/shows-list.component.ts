@@ -2,6 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Show } from '../../interfaces/show.interface';
 import { ShowCardComponent } from '../show-card/show-card.component';
+import { TvShowsService } from '../../services/tv-shows.service';
 
 @Component({
   selector: 'app-shows-list',
@@ -17,11 +18,4 @@ export class ShowsListComponent {
   @Input()
   public tvShows : Show[] = []
 
-  @Output() 
-  public delete: EventEmitter<number> = new EventEmitter<number>();
-  
-  onDelete(id: number): void {
-    console.log("Click en eliminar tarjeta desde show-list component");
-    this.delete.emit(id);
-  }
 }

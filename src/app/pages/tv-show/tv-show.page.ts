@@ -25,23 +25,4 @@ export class TvShowPage {
   get tvShows2(): Show[]{
     return this.TvShowsService.tvShows2;
   }
-
-  public setAllAs(value: boolean) : void{
-    this.tvShows.forEach( item => item.isSelected = value);
-    console.log("Accion desde el App Component");
-  }
-
-  public invertirTvShows(): void {
-    console.log("Se invierten tarjetas en app component");
-    this.tvShows.reverse();
-  }
-
-  public deleteTvShow(id: number): void {
-    console.log("Click en eliminar tarjeta desde app component");
-    this.TvShowsService.delete(id);
-  }
-
-  public search( value: string ){
-    this.TvShowsService.searchByTerm(value);
-  }
 }
