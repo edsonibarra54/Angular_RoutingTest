@@ -1,6 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Show } from '../../interfaces/show.interface';
+import { TvShowsService } from '../../services/tv-shows.service';
 
 @Component({
   selector: 'app-show-card',
@@ -19,17 +20,14 @@ export class ShowCardComponent {
     year: 0,
   };
 
-  @Output() 
-  public delete: EventEmitter<number> = new EventEmitter<number>();
-
-  //public selected: boolean = false;
+  constructor(private TvShowsService : TvShowsService){
+  }
 
   public onSelect(): void{
     this.tvShow.isSelected = !this.tvShow.isSelected
-  } 
+  }
 
   public onDeleteClick(): void {
-    console.log("Click en eliminar tarjeta");
-    this.delete.emit(this.tvShow.id);
+    this.TvShowsService.delete(this.tvShow.id);
   }
 }

@@ -77,4 +77,14 @@ export class TvShowsService {
   public decrementa(): void{
     this.contador--;
   }
+
+  public setAllAs(value: boolean) : void{
+    this.tvShows.forEach( item => item.isSelected = value);
+    console.log("Accion desde el servicio");
+  }
+
+  public invertirTvShows(): void {
+    console.log("Se invierten tarjetas desde el servicio");
+    this.tvShows.reverse();
+  }
 }
